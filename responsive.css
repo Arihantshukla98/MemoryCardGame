@@ -1,0 +1,51 @@
+/* Ensure the game container scales well on mobile */
+.game-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .game-board {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+        gap: 8px; /* Smaller gap */
+    }
+
+    .card {
+        width: 80px;
+        height: 80px;
+        font-size: 20px;
+    }
+
+    #reset-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-board {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+        gap: 5px;
+    }
+
+    .card {
+        width: 70px;
+        height: 70px;
+        font-size: 18px;
+    }
+
+    #reset-button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+}
